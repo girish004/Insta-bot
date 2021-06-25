@@ -32,12 +32,14 @@ login(driver)
 notification(driver)
 driver.get("https://www.instagram.com/direct/inbox/")
 time.sleep(6)
+variable="Message you wanna provide"
 while(1):
     try:
         num=int(driver.find_element_by_class_name("bqXJH").get_attribute("innerHTML"))
         print("Total messages:",num)
         driver.find_element_by_css_selector("div._41V_T.Sapc9.Igw0E.IwRSH.eGOV_._4EzTm").click()
         print(driver.find_elements_by_css_selector("div._7UhW9.xLCgt.MMzan.KV-D4.p1tLr.hjZTB")[-1].get_attribute("innerHTML"))
+        driver.find_element_by_xpath("/html/body/div[1]/section/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div[2]/textarea").send_keys(variable)
     except:
         print("No messages found")
         break
