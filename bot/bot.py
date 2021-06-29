@@ -10,7 +10,7 @@ from selenium.webdriver import ActionChains
 from instabot import Bot
 
 def message(driver):
-    variable1="Hello there from Nanbargal iyakkam!\n"
+    variable1="Hello there from xxxxx!\n"
     variable2="Press the respective keys to know about us\n"
     variable3="1. To know the name of our NGO's head\n"
     variable4="2. Details about our previous service.\n"
@@ -28,9 +28,9 @@ def message(driver):
             driver.find_element_by_xpath("/html/body/div[1]/section/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div[2]/textarea").send_keys(variable1+variable2+variable3+variable4+variable5+variable6)
             driver.find_element_by_xpath("/html/body/div[1]/section/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div[3]/button").click()
             time.sleep(2)
-            one="Jey vishvak is the name of our head. Thanks for your interest. Have a nice day!"
-            two="We did our previous service near saidapet, We served 100 poor by feeding them with sambhar rice. Thanks for your interest. Stay in touch! Have a great day"
-            three="We are looking to serve the poor in the teynampet slum. Do help us by offering us anything you can. Thanks. Have a great day!"
+            one="xxxx is the name of our head. Thanks for your interest. Have a nice day!"
+            two="We did our previous service xxxx"
+            three="We are looking to serve the poor in xxxx"
             variable6="4. Exit"
             starttimer=int(time.perf_counter())
             endtimer=int(time.perf_counter())
@@ -70,9 +70,9 @@ def message(driver):
 def login(driver):
     time.sleep(3)
     logusername=driver.find_element_by_xpath("/html/body/div[1]/section/main/article/div[2]/div[1]/div/form/div/div[1]/div/label/input")
-    logusername.send_keys("arch.anakrish")
+    logusername.send_keys("Username goes here")
     password=driver.find_element_by_xpath("/html/body/div[1]/section/main/article/div[2]/div[1]/div/form/div/div[2]/div/label/input")
-    password.send_keys("12345678a")
+    password.send_keys("Password goes here")
     driver.find_element_by_xpath("/html/body/div[1]/section/main/article/div[2]/div[1]/div/form/div/div[3]/button").click()
     time.sleep(6)
 
