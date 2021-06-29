@@ -10,7 +10,7 @@ from selenium.webdriver import ActionChains
 from instabot import Bot
 
 def message():
-    '''one="Jey vishvak is the name of our head. Thanks for your interest. Have a nice day!"
+    one="Jey vishvak is the name of our head. Thanks for your interest. Have a nice day!"
     two="We did our previous service near saidapet, We served 100 poor by feeding them with sambhar rice. Thanks for your interest. Stay in touch! Have a great day"
     three="We are looking to serve the poor in the teynampet slum. Do help us by offering us anything you can. Thanks. Have a great day!"
     variable1="Hello there from Nanbargal iyakkam!\n"
@@ -18,7 +18,7 @@ def message():
     variable3="1. To know the name of our NGO's head\n"
     variable4="2. Details about our previous service.\n"
     variable5="3. Details about our next service\n"
-    variable6="4. Exit"'''
+    variable6="4. Exit"
     while(1):
         try:
             num=int(driver.find_element_by_class_name("bqXJH").get_attribute("innerHTML"))
@@ -80,8 +80,6 @@ def notification(driver):
 
 driver = webdriver.Chrome(executable_path="C:\\Webdriver\\chromedriver_win32\\chromedriver.exe")
 driver.get("http://www.instagram.com/")
-if("hi"=="hi\n"):
-    print("hi")
 login(driver)
 notification(driver)
 driver.get("https://www.instagram.com/direct/inbox/")
